@@ -20,7 +20,8 @@ juce_add_plugin(MyJUCEPlugin
 target_sources(MyJUCEPlugin PRIVATE
     # List your plugin source files here
     Source/PluginProcessor.cpp
-    Source/PluginEditor.cpp)
+    Source/PluginEditor.cpp
+    Source/ReverbPluginEditor.cpp)
 
 # Link the JUCE library to the plugin
 target_link_libraries(MyJUCEPlugin PRIVATE juce::juce_audio_plugin_client)
