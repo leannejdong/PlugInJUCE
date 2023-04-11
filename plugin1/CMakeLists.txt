@@ -12,9 +12,16 @@ add_subdirectory(juce)
 
 # Add the plugin source files
 juce_add_plugin(MyJUCEPlugin
-    PLUGIN_MANUFACTURER "MyCompany"
-    PLUGIN_DESCRIPTION "My JUCE Plugin"
-    PLUGIN_NAME "MyJUCEPlugin")
+PRODUCT_NAME "Reverb Plugin"
+PLUGIN_MANUFACTURER_CODE "Manu"
+PLUGIN_CODE "Rvrb"
+FORMATS VST3 AU Standalone
+IS_SYNTH FALSE
+NEEDS_MIDI_INPUT FALSE
+NEEDS_MIDI_OUTPUT FALSE
+IS_MIDI_EFFECT FALSE
+EDITOR_WANTS_KEYBOARD_FOCUS FALSE
+COPY_PLUGIN_AFTER_BUILD TRUE)
 
 # Set the plugin source files
 target_sources(MyJUCEPlugin PRIVATE

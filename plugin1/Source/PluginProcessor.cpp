@@ -169,6 +169,11 @@ juce::AudioProcessorEditor* Plugin1AudioProcessor::createEditor()
     return new Plugin1AudioProcessorEditor (*this);
 }
 
+juce::AudioProcessorEditor* ReverbPluginProcessor::createEditor()
+{
+    return new ReverbPluginEditor(*this);
+}
+
 //==============================================================================
 void Plugin1AudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
