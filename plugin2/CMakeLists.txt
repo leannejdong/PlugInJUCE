@@ -27,7 +27,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Add the JUCE library
-add_subdirectory(juce)
+add_subdirectory(JUCE)
 
 # Set Xcode as the generator
 set(CMAKE_XCODE_GENERATE_SCHEME ON)
@@ -54,14 +54,13 @@ NEEDS_MIDI_INPUT FALSE
 NEEDS_MIDI_OUTPUT FALSE
 IS_MIDI_EFFECT FALSE
 EDITOR_WANTS_KEYBOARD_FOCUS FALSE
-COPY_PLUGIN_AFTER_BUILD TRUE)
+COPY_PLUGIN_AFTER_BUILD FALSE)
 
 # Set the plugin source files
 target_sources(MyJUCEPlugin PRIVATE
     # List your plugin source files here
     Source/PluginProcessor.cpp
-    Source/PluginEditor.cpp
-    Source/ReverbPluginEditor.cpp)
+    Source/PluginEditor.cpp)
 
 # Link the JUCE library to the plugin
 target_link_libraries(MyJUCEPlugin PRIVATE juce::juce_audio_plugin_client)

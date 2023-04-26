@@ -1,4 +1,7 @@
 build
+Build
+buildX
 juce
 juceLibraryCode
 .vscode
+.DS_Store
