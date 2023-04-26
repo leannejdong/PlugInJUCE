@@ -1,4 +1,4 @@
-#  CMake Template for Juce plug-in
+#  CMake Template for JUCE plug-in
 
 To generate an **Xcode** project, run:
 ```sh
