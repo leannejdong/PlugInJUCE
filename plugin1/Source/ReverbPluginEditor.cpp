@@ -1,8 +1,8 @@
 #include "ReverbPluginEditor.h"
 
-ReverbPluginEditor::ReverbPluginEditor(AudioProcessor& processor)
+ReverbPluginEditor::ReverbPluginEditor(juce::AudioProcessor& processor)
     : AudioProcessorEditor(&processor)
-    , mDryWetSlider(Slider::RotaryHorizontalVerticalDrag, Slider::TextBoxBelow)
+    , mDryWetSlider(juce::Slider::RotaryHorizontalVerticalDrag, juce::Slider::TextBoxBelow)
     , mSliderAttachment(processor.getParameters(), "dry_wet", mDryWetSlider)
 {
     addAndMakeVisible(mDryWetSlider);
